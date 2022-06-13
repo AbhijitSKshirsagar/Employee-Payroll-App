@@ -4,9 +4,9 @@ import ProfilePic1 from '../../assets/profile-images/Ellipse -1.png';
 import ProfilePic2 from '../../assets/profile-images/Ellipse -2.png';
 import ProfilePic3 from '../../assets/profile-images/Ellipse -3.png';
 import ProfilePic4 from '../../assets/profile-images/Ellipse -4.png';
-export default function PayrollForm () {
+export default function PayrollForm() {
     return (
-        
+
         <div className="form-content">
             <form className="form" action="#" onSubmit={save}>
 
@@ -22,22 +22,22 @@ export default function PayrollForm () {
                         <label>
                             <input type="radio" id="profile2" name="profile" value="..\assets\profile-images/Ellipse -1.png"
                                 required />
-                            <img className="profile" id="image1" src={ProfilePic1} alt=""/>
+                            <img className="profile" id="image1" src={ProfilePic1} alt="" />
                         </label>
                         <label>
                             <input type="radio" id="profile2" name="profile" value="..\assets\profile-images/Ellipse -2.png"
                                 required />
-                            <img className="profile" id="image2" src={ProfilePic2} alt=""/>
+                            <img className="profile" id="image2" src={ProfilePic2} alt="" />
                         </label>
                         <label>
                             <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -3.png"
                                 required />
-                            <img className="profile" id="image3" src={ProfilePic3} alt=""/>
+                            <img className="profile" id="image3" src={ProfilePic3} alt="" />
                         </label>
                         <label>
                             <input type="radio" id="profile4" name="profile" value="..\assets\profile-images/Ellipse -4.png"
                                 required />
-                            <img className="profile" id="image4" src={ProfilePic4} alt=""/>
+                            <img className="profile" id="image4" src={ProfilePic4} alt="" />
                         </label>
                     </div>
                 </div>
@@ -68,11 +68,36 @@ export default function PayrollForm () {
                     </div>
                 </div>
 
+                {/* <div className="row-content"> */}
+                {/* <label className="label text" htmlFor="salary">Choose Your Salary: </label> */}
+                {/* <input className="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000" /> */}
+                {/* <output className="salary-output text" htmlFor="salary">400000</output> */}
+                {/* </div> */}
+
                 <div className="row-content">
-                    <label className="label text" htmlFor="salary">Choose Your Salary: </label>
-                    <input className="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000" />
-                    <output className="salary-output text" htmlFor="salary">400000</output>
+                    <label className="label text" htmlFor="salary">
+                        Choose your salary:{" "}
+                    </label>
+                    <input
+                        className="input"
+                        type="range"
+                        name="salary"
+                        min={300000}
+                        max={500000}
+                        step={100}
+                        defaultValue={400000}
+                    />
+                    <output className="salary-output text" htmlFor="salary">
+                        400000{" "}
+                    </output>
                 </div>
+
+
+
+                {/* <div className="row"> */}
+                {/* <label className="lable text" htmlFor="salary">Salary</label> */}
+                {/* {/* {/* <input className="input" type="number" onChange={chengeValue} id="salary" value={formValue.salary} name="salary" placeholder="Salary"/> */}
+                {/* </div> */}
 
                 <div className="row-content">
                     <label className="label text" htmlFor="startDate">Start Date</label>
@@ -158,5 +183,5 @@ function save() {
 }
 
 function reset() {
-    
+
 }
